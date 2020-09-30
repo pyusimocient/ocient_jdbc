@@ -785,7 +785,7 @@ public class XGStatement implements Statement {
 		return;
 	}
 
-	private ResultSet listAllQueries() throws SQLException {
+	public ResultSet listAllQueries() throws SQLException {
 		final ClientWireProtocol.SystemWideQueriesResponse.Builder er = (ClientWireProtocol.SystemWideQueriesResponse.Builder) sendAndReceive(
 				"", Request.RequestType.SYSTEM_WIDE_QUERIES, 0, false, Optional.empty());
 
